@@ -29,5 +29,4 @@
       - Subscriptions
       
   - The ERD diagramme of the whole database is following
-  - 
 ![ReactMasters_ERD_Diagram_Team1](https://user-images.githubusercontent.com/71572448/120253987-c996a080-c256-11eb-9ee2-5e134552af65.jpg)

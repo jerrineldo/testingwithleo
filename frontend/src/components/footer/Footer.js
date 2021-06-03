@@ -1,16 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-//Footer used in each page of the website
+/*Footer file with the copy right and social links.
+This component is pasted on all the pages */
+
 function Footer(){
 	return(
-	<footer>
-		<ul>
-		   <li><Link to="" > LinkedIn</Link> </li>
-		    <li><Link to="" >GitHub</Link> </li>
-		</ul>
-		<p>&copy; ReactMasters, {new Date().getFullYear()}</p>
-	</footer>
+		<footer>
+			<div className="row">
+				<ul className="col-12">
+				   <li><Link to="" > LinkedIn</Link> </li>
+					<li><Link to="" >GitHub</Link> </li>
+				</ul>
+				<p className="col-12">&copy; ReactMasters, {new Date().getFullYear()}</p>
+			</div>
+		</footer>
 	);
 }
 

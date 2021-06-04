@@ -4,11 +4,13 @@
    
 # Weekly progess
 
-   ## Diarra -- see this link: https://github.com/2021-Summer-HTTP-5303-RNA/project-planning-diarrabak 
-   ## Will   -- see this link 
-   ## Nodir  -- see this link 
-   ## Jerrin -- see this link 
-   ## Bryan  -- see this link 
+   ## Diarra -- see the link below 
+   - https://github.com/2021-Summer-HTTP-5303-RNA/project-planning-diarrabak 
+   
+   ## Will   -- see the link below 
+   ## Nodir  -- see the link below 
+   ## Jerrin -- see the link below 
+   ## Bryan  -- see the link below 
   
 # Resources
   ## Full stack tutorials

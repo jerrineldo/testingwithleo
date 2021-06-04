@@ -1,10 +1,15 @@
 # MERNProject Team-1
    ## This is a team project aiming at developing a website for a workshop.
    ## The MERN (MongoDB, Express.js, React.js and Node) stack will be used to implement this project
-# To run the project
-   ## Clone the repo
-   ## Go to frontend folder, type npm i (in the command)
-   ## Type npm start (in the command)
+   
+# Weekly progess
+
+   ## Diarra -- see this link: https://github.com/2021-Summer-HTTP-5303-RNA/project-planning-diarrabak 
+   ## Will   -- see this link 
+   ## Nodir  -- see this link 
+   ## Jerrin -- see this link 
+   ## Bryan  -- see this link 
+  
 # Resources
   ## Full stack tutorials
    - https://www.linkedin.com/learning/mern-essential-training/learn-all-about-mern?u=2148956

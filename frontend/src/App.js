@@ -6,6 +6,8 @@ import About from './components/about/About';
 import Author from './components/authors/Author';
 import Seminar from './components/seminars/Seminar';
 import SeminarForm from './components/seminars/SeminarForm';
+import DeleteSeminar from './components/seminars/DeleteSeminar';
+import UpdateSeminar from './components/seminars/UpdateSeminar';
 import Registration from './components/registration/Registration';
 import History from './components/history/History';
 import Team from './components/team/Team';
@@ -35,11 +37,7 @@ function App (){
 			 <Team />
 			 </Route>
 		</Route>
-		{/*Error page is at the root*/}
-		<Route path="/error">
-		   <Error />
-		</Route>
-
+		
 		<Route path="/author">
 		<Author />
 		</Route>
@@ -50,6 +48,14 @@ function App (){
 		
 		   <Route path="/newSeminar">
 		    <SeminarForm />
+		   </Route>
+		   
+		    <Route path="/deleteSeminar">
+		    <DeleteSeminar />
+		   </Route>
+		   
+		   <Route path="/updateSeminar">
+		    <UpdateSeminar />
 		   </Route>
 		
 		</Route>
@@ -62,6 +68,10 @@ function App (){
 		<Contact />
 		</Route>
 		
+		{/*Error page is at the root*/}
+		<Route path="*">
+		   <Error />
+		</Route>
 		
 		</Routes>
 		

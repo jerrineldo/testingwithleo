@@ -64,7 +64,7 @@ class Seminar extends React.Component {
 		  </div>
 		  {/*Link to the page of seminar removal*/}
 		  <div className="col-12 col-sm-4">
-          <Link to="removeSeminar" > Remove a seminar </Link>
+          <Link to="deleteSeminar" > Remove a seminar </Link>
 		  </div>
 		  
 		  <div className="col-12 col-sm-4">

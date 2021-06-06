@@ -1,19 +1,29 @@
 import React from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
-import { useHistory  } from "react-router-dom";
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
+// import Header from '../header/Header';
+// import Footer from '../footer/Footer';
 
  // This component is used to create a new seminar and save to the database
-class SeminarForm extends React.Component {
+class EditSeminar extends React.Component {
 	
+	constructor(props) {
+    super(props);
+    this.state = {
+      seminars: [],        //List of all seminars
+      currentSeminarId: '',  //Selected seminar id
+	  currentSeminar:{},
+    };
+   }
+   
+   // onChange(e) {
+         // this.setState({[e.target.name]: e.target.value})
+    // }
 	//method appending the form data to the seminar fields
     submitSeminar(event) {
 		 event.preventDefault();
-
-        //Our controller endpoint to save data to the database
-        axios.post('http://localhost:4000/seminars', {
+          //console.log("id= "+this.props.currentSeminarId);
+        //Our controller endpoint to update and save data to the database
+        axios.put('http://localhost:4000/seminar/'+this.props.currentSeminarId, {
             title: this.refs.title.value,
             content: this.refs.content.value,
             date: this.refs.date.value,
@@ -28,42 +38,44 @@ class SeminarForm extends React.Component {
         });
     }
 	
+	
 	//redirect function to be included so that we go back to seminar list each time a new seminar is added
   
     render() { 
 	
         return ( 
 		<>
-		   <Header />
-            <main>
-                <h1 >Create a new seminar</h1>
+		{/*<Header />
+		<main>
+		<h1 >Update a new seminar</h1>*/}
+			
 				{/*Form used to fill the seminar component*/}			
 				<form onSubmit={this.submitSeminar.bind(this)}>
 			 <div className="form-group row">
 		       <label className="form-label col-12 col-sm-2" htmlFor="title">Seminar title</label>
 		       <div className="col-12 col-sm-10">
-		          <input type="text" className="form-control" name="title" id="title" ref="title"/>
+		          <input type="text" className="form-control" defaultValue={this.props.currentSeminar.title} name="title" id="title" ref="title"/>
 		       </div>
 			  </div>
 			  
 			  <div className="form-group row">
 		       <label className="form-label  col-12 col-sm-2" htmlFor="content">Seminar content</label>
 		       <div className="col-12 col-sm-10">
-		          <input type="text" className="form-control" name="content" id="content" ref="content"/>
+		          <input type="text" className="form-control"  defaultValue={this.props.currentSeminar.content} name="content" id="content" ref="content"/>
 		       </div>
 			  </div>
 			  
 			  <div className="form-group row">
 		       <label className="form-label  col-12 col-sm-2" htmlFor="date">Seminar date</label>
 		       <div className="col-12 col-sm-10">
-		          <input type="date" className="form-control" name="date" id="date" ref="date"/>
+		          <input type="date" className="form-control" defaultValue={this.props.currentSeminar.date} name="date" id="date" ref="date"/>
 		       </div>
 			  </div>
 			  
 			  <div className="form-group row">
 		       <label className="form-label  col-12 col-sm-2" htmlFor="place">Seminar location</label>
 		       <div className="col-12 col-sm-10">
-		          <input type="text" className="form-control" name="place" id="place" ref="place" />
+		          <input type="text" className="form-control" defaultValue={this.props.currentSeminar.place} name="place" id="place" ref="place" />
 		       </div>
 			  </div>
 			  
@@ -93,21 +105,21 @@ class SeminarForm extends React.Component {
 			  </div>*/}
 			  <div className="row">
 			  <div className="offset-sm-2 col-12 col-sm-4">
-			  <input type="submit" className="btn btn-success" />
+			  <input type="submit" className="btn btn-success" value="Update" />
 			  </div>
-			  {/*Link back to seminar list*/}
+			  {/*Link back to seminar list
 			   <div className="col-12 col-sm-6">
                  <Link to="/seminar" > Back to seminar list </Link>
-		     </div>
+			  </div>*/}
 			 </div>
 		    </form>
-			
+			{/*
             </main>
 			
-			 <Footer />
+			<Footer />*/}
 			 </>
         );
     }
 }
  
-export default SeminarForm;
+export default EditSeminar;

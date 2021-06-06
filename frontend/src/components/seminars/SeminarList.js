@@ -10,7 +10,7 @@ const SeminarList = (props) => {
             {props.seminars.map((item) => (
                <li className="list-item"> 
 			   {/*Each time a seminar is clicked, its details appears */}
-			        <a href="#" className="list-item" key={item._id}
+			        <a href="#!" className="list-item" key={item._id.toString()}
 					
                     onClick={props.updateCurrentSeminar.bind(this,item)}>{item.title}</a>
 				</li>

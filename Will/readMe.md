@@ -1,4 +1,4 @@
-# Phase 4 Progress Notes
+# Phase 4 Progress Notes - June 7, 2021
 
 ## This week's progress
 - Last week I set up a remote database using mongodb and used an online tutorial as a framework to set up the CRUD functionality in Node and Express for the TOPICS collection. 

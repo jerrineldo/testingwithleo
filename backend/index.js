@@ -5,14 +5,18 @@ import cors from 'cors';
 import routes from './routes/seminarRoutes.js';
 
 const app = express();
-const PORT = 4000;
+const PORT = 5000;
 
 // mongo connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/reactMastersDB', {
+
+//mongoose.connect('mongodb://localhost/reactMastersDB', {
+	
+mongoose.connect('mongodb+srv://wamidgette:wamidgette@cluster0.mw6fd.mongodb.net/webinars_database?retryWrites=true&w=majority', {  //Atlas database connection
     useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+    useUnifiedTopology: true},
+	() => console.log(" Mongoose is connected")
+);
 
 // bodyparser setup
 app.use(bodyparser.urlencoded({ extended: true }));

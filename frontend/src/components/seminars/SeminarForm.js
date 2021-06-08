@@ -13,7 +13,7 @@ class SeminarForm extends React.Component {
 		 event.preventDefault();
 
         //Our controller endpoint to save data to the database
-        axios.post('http://localhost:4000/seminars', {
+        axios.post('http://localhost:5000/seminars', {
             title: this.refs.title.value,
             content: this.refs.content.value,
             date: this.refs.date.value,

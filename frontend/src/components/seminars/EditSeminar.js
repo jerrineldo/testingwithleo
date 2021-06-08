@@ -23,7 +23,7 @@ class EditSeminar extends React.Component {
 		 event.preventDefault();
           //console.log("id= "+this.props.currentSeminarId);
         //Our controller endpoint to update and save data to the database
-        axios.put('http://localhost:4000/seminar/'+this.props.currentSeminarId, {
+        axios.put('http://localhost:5000/seminar/'+this.props.currentSeminarId, {
             title: this.refs.title.value,
             content: this.refs.content.value,
             date: this.refs.date.value,

@@ -30,7 +30,7 @@ class UpdateSeminar extends React.Component {
   //When the component is active on the DOM
   //The values pulled from database to fill the dropdown menu
   componentDidMount() {
-    const url = 'http://localhost:4000/seminars';  //Url of the controller 
+    const url = 'http://localhost:5000/seminars';  //Url of the controller 
 	
     // Use of the get controllers through the axios API
     axios.get(url)
@@ -51,7 +51,7 @@ class UpdateSeminar extends React.Component {
   event.preventDefault();
          //console.log('id='+this.state.currentSeminarId);
     // Seminar removal enpoint from our controllers
-   axios.get('http://localhost:4000/seminar/'+this.state.currentSeminarId)
+   axios.get('http://localhost:5000/seminar/'+this.state.currentSeminarId)
    .then((Response) => {
         this.setState({
           currentSeminar: Response.data

@@ -20,7 +20,7 @@ class Seminar extends React.Component {
   }
   //When the component is active on the DOM
   componentDidMount() {
-    const url = 'http://localhost:4000/seminars';  //Url of the controller 
+    const url = 'http://localhost:5000/seminars';  //Url of the controller 
 	
     // Use of the get controllers through the axios API
     axios.get(url)

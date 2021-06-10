@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import bodyparser from 'body-parser';
 import cors from 'cors';
 import routes from './routes/seminarRoutes.js';
+import reviewroutes from './routes/reviewRoutes.js';
 
 const app = express();
 const PORT = 5000;
@@ -26,6 +27,7 @@ app.use(bodyparser.json());
 app.use(cors());
 
 routes(app);
+reviewroutes(app);
 
 app.get('/', (req, res) => 
     res.send(`Our seminar application is running on port ${PORT}`)

@@ -225,6 +225,9 @@ date: Date()
 - Made an exercise tracker website with embedded models using mongoose.
 ### Learning Curve and challengers
 
+- Initially , I was not able to get access to the shared mongodb database
+- But I could understand that , there was a network access issue, which needs the Ip address to be set to any address in the Network access tab of MongoDB atlas.
+  
 ## Learning Notes
 
 - https://github.com/jerrineldo/restaurantreviews

@@ -3,7 +3,8 @@ import {     //Import all our controllers
     getSeminars,
     getSeminarById,
     updateSeminar,
-    removeSeminar
+    removeSeminar,
+    getOldSeminars
 } from '../controllers/seminarControllers.js';
 
 const routes = (app) => {
@@ -15,7 +16,7 @@ const routes = (app) => {
 
     // POST endpoint
         .post(addSeminar);
-		
+        
     // Endpoint used for getting a seminar, update a seminar or delete a seminar 
     app.route('/seminar/:SeminarId')
         // Get specific seminar
@@ -26,6 +27,8 @@ const routes = (app) => {
 
         // update a specific seminar
         .delete(removeSeminar);
+
+    app.route('/reviewseminars').get(getOldSeminars);
 }
 
 export default routes;

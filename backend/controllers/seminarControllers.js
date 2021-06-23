@@ -28,6 +28,19 @@ export const getSeminars = (req, res) => {
     });
 };
 
+//Get all the old seminars
+export const getOldSeminars = (req, res) => {
+    var d = new Date();
+    console.log(d);
+    var query = { date:{$lte:d} };
+    Seminar.find({},(err, Seminar) => {
+        if (err) {
+            res.send(err);
+        }
+        res.json(Seminar);
+    }).where(query);
+};
+
 //Get a particular seminar
 export const getSeminarById = (req, res) => {
     Seminar.findById(req.params.SeminarId,(err, Seminar) => {

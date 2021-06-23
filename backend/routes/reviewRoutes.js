@@ -4,7 +4,7 @@ import {
   getReviews,
   getReviewById,
   updateReview,
-  removeReview,
+  removeReview
 } from "../controllers/reviewController.js";
 
 const routes = (app) => {

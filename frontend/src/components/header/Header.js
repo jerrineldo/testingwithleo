@@ -18,6 +18,7 @@ function Header(){
 						   <li><Link to="/about" >About us</Link></li>
 						   <li><Link to="/author" >Author</Link></li>
 						   <li><Link to="/seminar" >Seminars</Link></li>
+						   <li><Link to="/reviews" >Reviews</Link></li>
 						   <li> <Link to="/registration" >Registration</Link></li>
 						   <li><Link to="/contact" >Contact</Link></li>
 						</ul>
